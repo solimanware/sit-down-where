@@ -36,7 +36,7 @@
     }
         
     function initApp() {
-  if (! AdMob ) { console.log( 'admob plugin not ready' ); return; }
+  if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
   initAd();
         // display a banner at startup
         createSelectedBanner();
@@ -50,7 +50,7 @@
             // height: integer, // valid when set adSize 'CUSTOM'
             position: AdMob.AD_POSITION.BOTTOM_CENTER,
             // offsetTopBar: false, // avoid overlapped by status bar, for iOS7+
-            bgColor: '#ecf0f1', // color name, or '#RRGGBB'
+            bgColor: 'black', // color name, or '#RRGGBB'
             // x: integer,    // valid when set position to 0 / POS_XY
             // y: integer,    // valid when set position to 0 / POS_XY
             //isTesting: true, // set to true, to receiving test ad for testing purpose
@@ -63,7 +63,7 @@
     function registerAdEvents() {
         // new events, with variable to differentiate: adNetwork, adType, adEvent
         document.addEventListener('onAdFailLoad', function(data){ 
-          console.log('error: ' + data.error + 
+          alert('error: ' + data.error + 
               ', reason: ' + data.reason + 
               ', adNetwork:' + data.adNetwork + 
               ', adType:' + data.adType + 
