@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Going Tanta</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+    nav img{
+    	float: left;
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+    }
+    .road{
+    	width: 80%;
+    	margin: 0 auto;
+    }
+    
+    .road img {
+    	width: 100%;
+    	height: 100%;
+    	max-height: 345px;
+    	max-width: 400px;
+    	margin:0 auto;
+    	display: block;
+    	padding-top: 2%;
+
+    }
+    #road{
+    	position: relative;
+    	margin-top: -2%;
+    }
+    #sun{
+    	margin-top: -2%;
+    	float: none;
+    	width: 10%;
+    	height: 10%;
+    		
+
+
+    }
+    #not{
+        font-size: 120%;
+        color: #2c3e50;
+    }
+
+    .sit{
+    	color: white;
+    	text-align: center;
+    	font-size: 90%;
+    }
+    #sit{
+    	width: 20%;
+    	background:green;
+    	text-align: center;
+    	margin: 0 auto;
+    	margin-top: 0%;
+        font-size: 100%;
+    }
+
+	</style>
+</head>
+<body onload="whereToSit();">
+<script type="text/javascript">
+    function whereToSit(){
+        var time = new Date().getHours();
+                if (time < 12) {
+                document.getElementById("sit").innerHTML="شمال";
+                document.getElementById("sun").style.marginRight = "25%";
+                } else if (time < 18 ) {
+                document.getElementById("sit").innerHTML="يمين";
+                document.getElementById("sun").style.marginLeft = "10%";
+                } else {
+                document.getElementById("sit").innerHTML="في أي مكان مفيش شمس دلوقتي";
+                }   
+    }
+    
+
+</script>	
+
+	<div class="warpper">
+		<nav>
+            <img src="img/back.png" ontouchstart="location.href='main.html'">
+            <div class="title">لو رايح طنطا دلوقتي</div>
+        </nav>
+		<div class="road">
+			<img id="sun" src="sun.png" alt="The sun">
+			<img id="road" src="road1.jpg" alt="Road pic">
+		</div>
+		<div class="sit"><h1 id="not">عشان الشمس متجيش عليك اقعد</h1><h2 id="sit">المكان</h2></div>
+	</div>
+	<div class="footer">
+		Copyright © All Rights Reserved Brilliant App
+	</div>
+	
+</body>
+</html>
