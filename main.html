@@ -6,6 +6,9 @@
 <script type="text/javascript" src="cordova.js"></script>
 <link rel="stylesheet" href="css/main.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    #fullpage {display: none;}
+</style>
 </head>
 <body onload="onLoad()" onresize="onResize()">
 <script>
@@ -54,8 +57,8 @@
             bgColor: 'black', // color name, or '#RRGGBB'
             // x: integer,    // valid when set position to 0 / POS_XY
             // y: integer,    // valid when set position to 0 / POS_XY
-            //isTesting: true, // set to true, to receiving test ad for testing purpose
-            // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
+            isTesting: false, // set to true, to receiving test ad for testing purpose
+            autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
         };
         AdMob.setOptions( defaultOptions );
         registerAdEvents();
