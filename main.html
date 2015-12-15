@@ -21,23 +21,23 @@
     var admobid = {};
     if( /(android)/i.test(navigator.userAgent) ) {
     admobid = {
-      banner: 'ca-app-pub-5064752282990502/9108256479',
-      interstitial: 'ca-app-pub-5064752282990502/1584989670'
+      banner: 'ca-app-pub-4457719262099261/7139353230',
+      interstitial: 'ca-app-pub-4457719262099261/5662620035'
     };
     } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
     admobid = {
-      banner: 'ca-app-pub-6869992474017983/4806197152',
-      interstitial: 'ca-app-pub-6869992474017983/7563979554'
+      banner: 'ca-app-pub-4457719262099261/7139353230',
+      interstitial: 'ca-app-pub-4457719262099261/5662620035'
     };
     } else {
     admobid = {
-      banner: 'ca-app-pub-6869992474017983/8878394753',
-      interstitial: 'ca-app-pub-6869992474017983/1355127956'
+      banner: 'ca-app-pub-4457719262099261/7139353230',
+      interstitial: 'ca-app-pub-4457719262099261/5662620035'
     };
     }
         
     function initApp() {
-  if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
+  if (! AdMob ) { console.log( 'admob plugin not ready' ); return; }
   initAd();
         // display a banner at startup
         createSelectedBanner();
@@ -64,7 +64,7 @@
     function registerAdEvents() {
         // new events, with variable to differentiate: adNetwork, adType, adEvent
         document.addEventListener('onAdFailLoad', function(data){ 
-          alert('error: ' + data.error + 
+          console.log('error: ' + data.error + 
               ', reason: ' + data.reason + 
               ', adNetwork:' + data.adNetwork + 
               ', adType:' + data.adType + 
